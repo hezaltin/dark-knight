@@ -69,6 +69,7 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint-config-prettier": "^2.10.0",
     "eslint-plugin-prettier": "^2.7.0",
+    "font-awesome": "^4.7.0",
     "jest-enzyme": "^4.0.2",
     "nock": "^9.6.1",
     "prettier": "^1.14.3",
