@@ -1,0 +1,42 @@
+.dzu-input {
+  display: none !important;
+}
+
+.dzu-dropzone {
+  overflow: auto;
+  background-color: #f6f6f6;
+  border: none;
+}
+
+.dzu-inputLabel {
+  font-weight: normal;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #777;
+}
+
+
+.dzu-dropzoneActive {
+  border: 4px dotted #d9230f;
+}
+
+
+
+.dzu-inputLabelWithFiles {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background: inherit;
+}

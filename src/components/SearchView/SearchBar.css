@@ -1,0 +1,28 @@
+.glyphicon-spin {
+  animation: spin 2000ms infinite linear;
+}
+
+.ml-execute-search {
+	background-image: linear-gradient(#888888, #8c8c8c 6%, #6f6f6f);
+	border: 1px solid #888888;
+}
+
+.ml-qtext-clear {
+	background-image: linear-gradient(#888888, #8c8c8c 6%, #6f6f6f);
+	border: 1px solid #888888;
+}
+
+form.rjsf legend {
+	font-size: 13px;
+	color: #777777;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+

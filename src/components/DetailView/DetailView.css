@@ -1,0 +1,118 @@
+.reports{
+    
+    margin-bottom: 10px;
+}
+.detail-list-container h4{
+    margin-top:40px
+} 
+
+.detail-request{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    height: auto;
+    width: 100%;
+    /* For React Material */
+    font-size: 110%;
+    /* For Bootstrap */
+    /* font-size: 100%; */
+    margin-top: 20px;
+}
+
+.detail-request span {
+    margin-bottom: 10px;
+}
+
+.detail-request div{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+
+.detail-page{
+    display: flex;
+}
+
+.key-facts-container{
+    width: 48%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+
+.rendered-table{
+    font-size: 100%;
+}
+
+.key-facts-list{
+    padding: 0 20px 20px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+}
+
+.key-facts-list h3{
+    color: red;
+}
+
+.ml-result-metadata h1 {
+    font-size: 140%;
+    font-weight: 700;
+}
+
+.no-data-preview{
+    align-self: center;
+    font-size: 140%;
+    font-weight: 300;
+}
+
+.detail-tabs{
+    width:100%
+}
+.pg-viewer-wrapper{
+    border: 3px solid salmon;
+    margin-top: -48px;
+}
+
+.doc-container{
+    display:flex;
+    justify-content: space-between;
+}
+
+.font-icon-container{
+    font-size: 90%;
+    cursor: pointer;
+
+}
+
+.render-container{
+    display: flex;
+    justify-content: space-between
+}
+
+
+.tab-level-info{
+    display: flex
+}
+
+/* ---------------TAB LEVEL INNER -------------*/
+.tab-level-inner{
+    margin-top: 20px;
+}
+
+.ml-result-metadata table.result-metadata th{
+    width:36%
+}
+
+.empty-content{
+    display: flex;
+    justify-content: center;
+    font-size: 140%;
+    /* font-style: italic; */
+    font-weight: 700;
+}

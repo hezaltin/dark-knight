@@ -1,0 +1,289 @@
+{
+    "schema": {
+        "type": "object",
+        "required": [
+            "productInfo",
+            "sampleInfo"
+        ],
+        "properties": {
+            "productInfo": {
+                "type": "object",
+                "title": "Sample Information",
+                "properties": {
+                    "manufacturer": {
+                        "type": "string",
+                        "title": "Manufacturer"
+                    },
+                    "model": {
+                        "type": "string",
+                        "title": "Model"
+                    }
+                }
+            },
+            "sampleInfo": {
+                "type": "array",
+                "title": "Sample Information",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "raNumber": {
+                            "type": "string",
+                            "title": "RA Number"
+                        },
+                        "serialNumber": {
+                            "type": "string",
+                            "title": "Serial Number"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Date"
+                        }
+                    }
+                }
+            },
+            "thumbnail": {
+                "type": "string",
+                "title": "Thumbnail"
+            },
+            "materials": {
+                "type": "object",
+                "title": "Materials",
+                "properties": {
+                    "beforeBoxOpened": {
+                        "type": "object",
+                        "title": "Before Box Opened",
+                        "properties": {
+                            "packaging": {
+                                "type": "object",
+                                "title": "Packaging",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            },
+                            "couplerMaterial": {
+                                "type": "object",
+                                "title": "Coupler Material",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            },
+                            "couplerThickness": {
+                                "type": "object",
+                                "title": "Coupler Thickness",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "afterBoxOpened": {
+                        "type": "object",
+                        "title": "After Box Opened",
+                        "properties": {
+                            "label": {
+                                "type": "object",
+                                "title": "Label",
+                                "properties": {
+                                    "data": {
+                                        "type": "array",
+                                        "title": "Data",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            },
+                            "endCapMaterial": {
+                                "type": "object",
+                                "title": "End Cap Material",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "afterElementOpened": {
+                        "type": "object",
+                        "title": "After Element Opened",
+                        "properties": {
+                            "brineScreenSpacerShape": {
+                                "type": "object",
+                                "title": "Brine Screen Spacer Shape",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "performance": {
+                        "type": "object",
+                        "title": "Performance",
+                        "properties": {
+                            "saltRejection": {
+                                "type": "object",
+                                "title": "Salt Rejection",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            },
+                            "flux": {
+                                "type": "object",
+                                "title": "Flux",
+                                "properties": {
+                                    "data": {
+                                        "type": "string",
+                                        "title": "Data"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "title": "Method"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "literature": {
+                        "type": "object",
+                        "title": "Literature",
+                        "properties": {
+                            "datasheet": {
+                                "type": "array",
+                                "title": "Datasheet",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "patent": {
+                                "type": "array",
+                                "title": "Patent",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "news": {
+                                "type": "array",
+                                "title": "News",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "publication": {
+                        "type": "object",
+                        "title": "Publication",
+                        "properties": {
+                            "internalPublication": {
+                                "type": "array",
+                                "title": "Internal Publication",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "externalPublication": {
+                                "type": "array",
+                                "title": "External Publication",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ui": {
+        "edit": {},
+        "view": {
+            "sampleInfo": {
+                "ui:disabled": true
+            },
+            "afterBoxOpened": {
+                "label": {
+                    "data": {
+                        "items": {
+                            "ui:emptyValue": ""
+                        }
+                    }
+                }
+            },
+            "literature": {
+                "datasheet": {
+                    "items": {
+                        "ui:emptyValue": ""
+                    }
+                },
+                "patent": {
+                    "items": {
+                        "ui:emptyValue": ""
+                    }
+                },
+                "news": {
+                    "items": {
+                        "ui:emptyValue": ""
+                    }
+                }
+            },
+            "publication": {
+                "internalPublication": {
+                    "items": {
+                        "ui:emptyValue": ""
+                    }
+                },
+                "externalPublication": {
+                    "items": {
+                        "ui:emptyValue": ""
+                    }
+                }
+            }
+        }
+    }
+}

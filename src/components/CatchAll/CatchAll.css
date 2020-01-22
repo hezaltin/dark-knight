@@ -1,0 +1,25 @@
+.container-catchall{
+    position: absolute;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+    right: 0;
+    margin: auto;
+}
+.center-catchall{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.four-zero-four{
+    font-size: 150px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#zero{
+    color: #d9230f;
+}

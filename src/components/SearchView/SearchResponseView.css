@@ -1,0 +1,4 @@
+.display-mode-menu ul.dropdown-menu li.active.disabled a {
+  background-color: #fff;
+  color: #aaa;
+}

@@ -1,0 +1,4 @@
+.toggle, .toggle:hover, .toggle:focus {
+  background: transparent;
+  border: 0;
+}

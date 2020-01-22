@@ -1,0 +1,161 @@
+.panel-body {
+  padding: 8px 15px;
+}
+
+.grove-current-filter .btn {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 4px 12px;
+  margin: 6px 1px;
+}
+
+.grove-current-filter .btn span {
+  display: inline-block;
+  text-align: left;
+}
+
+.grove-current-filter .btn span.glyphicon  {
+  padding-right: 4px;
+}
+
+.ml-facet-list .panel-heading {
+  padding: 5px 15px;
+}
+
+.ml-facet-list .panel-heading .panel-title {
+  font-size: 13px;
+}
+
+.ml-search-result-metadata table.result-metadata {
+  margin-bottom: 6px;
+}
+
+.ml-search-result-metadata table.result-metadata th, 
+.ml-search-result-metadata table.result-metadata td {
+  border: none;
+  padding: 2px 6px 2px 0;
+}
+
+/* .ml-search-result-metadata table.result-metadata th {
+  width: 16%;
+} */
+
+label.abstract-toggle {
+  font-size: 13px;
+}
+
+.ml-result-metadata h1 {
+  font-size: 18px;
+}
+
+.ml-result-metadata table.result-metadata th, 
+.ml-result-metadata table.result-metadata td {
+  border: none;
+  padding: 6px 6px 2px 0;
+}
+
+.ml-result-metadata table.result-metadata th {
+  width: 16%;
+  min-width: 190px;
+}
+
+.request-form table.result-metadata th, 
+.request-form table.result-metadata td {
+  border: none;
+  padding: 6px 6px 2px 0;
+}
+
+.request-form table.result-metadata th {
+  min-width: 110px;
+}
+
+.nonSelectedFilterValues .filterValue {
+  position: relative;
+  cursor: default;
+  padding: 1px 0;
+}
+
+.nonSelectedFilterValues .filterValue:hover {
+  color: #d9230f;
+}
+
+.nonSelectedFilterValues .filterValue .selector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  background: #fff;
+}
+
+.nonSelectedFilterValues .filterValue:hover .selector {
+  visibility: visible;
+}
+
+.nonSelectedFilterValues .filterValue i {
+  font-size: 20px;
+}
+
+
+.pdf-container {
+  padding: 12px;
+}
+
+.pdf-container .pdf-preview {
+  box-shadow: 2px 2px 8px 6px rgba(0,0,0,0.25);
+}
+
+.pdf-container .preview-pagination {
+  margin: 8px auto;
+}
+
+.pdf-container .pager {
+  position: absolute;
+  right: 42px;
+  z-index: 100;
+}
+
+.pdf-container .pager button {
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+
+.pdf-container .pager button[disabled] {
+  background: #c0c0c0;
+  opacity: 1;
+}
+
+
+.read-more-button {
+  cursor: pointer;
+  color: #a91b0c;
+}
+
+.read-more-button:hover {
+  color: #d9230f;
+}
+
+button:focus {
+  outline:0 !important;
+}
+
+.rjsf input::placeholder {
+  color: #bbb !important;
+}
+
+.rjsf .panel.errors .panel-heading {
+  padding: 5px 15px;
+}
+
+.rjsf .panel.errors .panel-heading .panel-title {
+  font-size: 5px 14px;
+}
+
+.rjsf .rbt-input-multi {
+  height: inherit !important; 
+}
+
+.rbt .rbt-token {
+  padding: 5px 21px 5px 7px;
+}

@@ -1,0 +1,38 @@
+.glyphicon-chevron-right{
+    color: black;
+}
+
+
+
+.glyphicon-chevron-left{
+    color: black;
+}
+
+.carousel-control.right{
+    background: none;
+    transition: .2s ease-in;
+    width: 50px;
+}
+
+
+
+
+.carousel-control.left{
+    background: none;
+    transition: .1s ease-in;
+    width: 50px;
+
+}
+
+.carousel-indicators li{
+    background-color: black;
+    width: 25px;
+    transition: .2s ease-in;
+}
+
+.carousel-indicators .active {
+    background-color: black;
+}
+
+
+

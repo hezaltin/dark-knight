@@ -1,0 +1,9 @@
+.ml-search-result .panel-body {
+  overflow: hidden;
+  height: 207px;
+}
+
+.toggle, .toggle:hover, .toggle:focus {
+  background: transparent;
+  border: 0;
+}

@@ -1,0 +1,28 @@
+.constraint-selector .rbt-token {
+  display: block;
+}
+
+.constraint-selector .rbt-token-removeable {
+  padding: 0;
+}
+
+.constraint-selector .rbt-token-removeable button.close {
+  display: none;
+}
+
+.constraint-selector .rbt-token-removeable .btn {
+  display: block;
+  text-align: left;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.constraint-selector .rbt-token-removeable .btn span.close-btn {
+  padding-right: 4px;
+  color: white;
+}
+
+.constraint-selector-includes .rbt-token-removeable {
+
+}

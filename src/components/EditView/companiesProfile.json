@@ -1,0 +1,88 @@
+{
+    "Toray": {
+        "profileTab": {
+            "manufacturerProfile": ["BW, SW, Specialty & Dairy membranes", "CSM subsidiary for residential, BW, SW, NF, UF & Cartridge Filters", "1.8\", 2\", 2.5\", 4\", 8\", 16\" elements", "Also offers UF & MBR", "Software: RO-TorayDS/DS2; UF- TORAYFIL®", "Headquarter in Japan", "Manufacturing sites: RO-Japan, USA, KSA, China (TBMC), Korea (CSM); UF-Japan, Korea (CSM); MBR-China; PET films-Korea"],
+            "quickGuide": {
+                "elementConstruction":{
+                    "title": "Element Construction - All elements",
+                    "content":[
+                    "DOW FILMTEC™ feed spacer demonstrated better mechanical properties when operated side by side with a Toray element. Toray feed spacer is made from polyethylene which is more flexible and deformable, especially at high temperature, what may lead to mechanical damage [Fig. 1 and 2]", "Toray´s reduced feed spacer strand count can lead to increased rates of fouling and scaling", "Toray´s thinner permeate spacer that can lead to flux maldistribution and increased rates of fouling", "Toray´s thinner membrane, can be associated with increased membrane deformation, resulting in reduced permeate flow and increased salt passage over time", "DOW FILMTEC™ membranes do not have patches. Toray has typically between 1 to 2 patches per element, what suggests membrane manufacturing consistency issues and not optimized quality control [Fig. 3]"
+                ]},
+                "pressureDropAndFoul": {
+                    "title": "Pressure Drop and Fouling Resistance - BW Fouling resistant elements",
+                    "content": [
+                    "DOW FILMTEC™ feed spacer has the lowest element pressure drop. Dow is able to offer up to 56% lower pressure drop (dP), compared to Toray BW TML20D-400 element. This low dP has a direct impact on energy savings [Fig. 4]","DOW FILMTEC™ elements have better biofouling resistance thanks to latest membrane and spacer innovations. Toray might need to be cleaned up to 23% more due to biofouling [Fig. 5]"
+                ]},
+                "designSoftware": {
+                    "title": "Design Software - All elements",
+                    "content": ["Dow Water Solutions has an integrated WAVE plant design software that incorporates UF, RO & IER. Toray software is not integrating UF and RO and there is a separate software for both technologies."]}
+            }
+        }, 
+        "warrantyTermsTab": {
+            "warranty": "Performance warranty: during the warranty period at standard test conditions Toray warrants:\nSalt passage will not exceed 3 times maximum salt passage\nPermeate flow should remain at or above 70% of minimum flow rate specified in PDS",
+            "filmTec":["Salt passage rate of no more than 1.35 x maximum salt passage rate specified", "Permeate flow of at least 70% of average flow rate specified in PDS"]
+
+        },
+        "linksTab": {
+            "supportingMaterial": ["RO/NF Sales Kit: Technical Library/Competitive Information/Toray","inSIGHT: https://dowwater.cipher-sys.com/KWDowWater/", "Toray web: http://www.toraywater.com/products/ro/", "CSM web: http://www.csmfilter.com/"],
+            "externalTechFacts": ["[1] Toray element construction 609-50337", "[2] TML10D vs FORTILIFE CR100 DP and long term performance 609-50290", "[3] TMG20-440 vs SR90-440 sulphate removal 609-50316"]
+        }
+    },
+    "LGChem":{
+        "profileTab": {
+            "manufacturerProfile":["BW, SW membranes", "Claims an improved membrane performance by embedding nanoparticles in the structure - \"Thin Film Nanocomposite\"", "4\" & 8\" elements", "Also offers UF & MBR", "Software: RO-Q+ Projection Software, QSee Normalization Software", "Manufacturing sites: RO, UF, MBR-Korea", "Founded in USA (NanoH2O)", "Headquarter in Korea"],
+            "quickGuide": {
+                "productRange": {
+                    "title": "Product Range - All elements",
+                    "content": ["Dow Water Solutions offers full range of UF, RO & IER products. LG Chem offers RO, MBR and UF."]},
+                "designSoftware": {
+                    "title": "Design Software - All elements",
+                    "content": ["Dow Water Solutions has an integrated WAVE plant design software that incorporates UF, RO & IER. LG Chem software is not integrating UF and RO.", "In case of LG BW 400 AFR: experimental TDS is 52% higher than software projections, or in other terms the experimental results are twice the predicted values. For DOW FILMTECTM BW30XFR-400/34i , experimental TDS is 3% lower than software prediction meaning that WAVE tended to be more conservative."]},
+                "lgMembraneChemistry": {
+                    "title": "LG Membrane Chemistry – in internal testing no nanoparticles were detected so far",
+                    "content": ["Seawater – Not chlorinated, similar to FILMTEC SW30HRLE. No chlorine post-treatment detected. Improved performance is likely driven by additives and/or post treatment with non-halogenated chemistry", "Brackish water – Chlorinated, baseline chemistry similar to BW30"]},
+                "lgChemNews": {
+                    "title": "LG Chem News",
+                    "content": ["LG introduced (October 2018) new generation of the SW elements with 99.89% rejection"]},
+                "pressureDropAndFoulingResistance": {
+                    "title": "Pressure Drop and Fouling Resistance - BW Fouling resistant elements",
+                    "content": ["DOW FILMTEC™ 34 mil fouling resistant feed spacer (element BW30XFR-400/34) has lower element pressure drop compared to LG Chem 34 mil feed spacer from the element BW400 AFR. Dow is able to offer up to 32% lower pressure drop (dP), offering the lowest dP from the market, saving energy [Fig. 1].", "DOW FILMTEC™ has better biofouling resistance. LG Chem might need to be cleaned 23% more often due to biofouling.", "DOW FILMTEC™ has higher capability to restore start-up dP after CIP.", "DOW FILMTEC™ membranes have better cleanability, as cleaning pH limits are between 1 and 13. LG Chem  minimum cleaning pH is 2, thus making it more difficult to be cleaned specially when they present inorganic fouling. Moreover, LG Chem maximum cleaning pH for non SW membranes is 12, thus making it more difficult to be cleaned specially when they are biofouled."]}
+            }
+        },
+        "warrantyTermsTabs": {
+            "warranty": "Performance warranty: during the warranty period at standard test conditions LG Chem warrants:\nSalt passage will not exceed 1.4 times maximum salt passage (when product is operated at pressure required to give initial rated permeate flow)\nPermeate flow should remain at or above 70% of average rated permeate flow",
+            "filmTec": ["Salt passage rate of no more than 1.35 x maximum salt passage rate specified", "Permeate flow of at least 70% of average flow rate specified in PDS"]
+        },
+        "linksTab": {
+            "supportingMaterial": ["RO/NF Sales Kit: Technical Library/Competitive Information/LG Chem (NanoH2O)", "inSIGHT: https://dowwater.cipher-sys.com/KWDowWater/", "LG Chem web: http://www.lgwatersolutions.com/en/main", "LG Chem UF: http://www.lg.com/global/business/membrane/g-brane-p-series", "LG Chem MBR: http://www.lg.com/global/business/membrane/g-brane-f-series"],
+            "externalTechFacts": ["[1]  Supplier C Differential pressure 609-50305"]
+        }
+    },
+    "Hydranautics": {
+        "profileTab": {
+            "manufacturerProfile": ["NF, BW, SW & Process Separation  membranes", "Patented Low Differential LD™ technology designed to minimize colloidal fouling", "4\", 8\", 16\" elements","Also offers UF, MF & MBR", "IMSDesign Software for RO", "RODataXL – RO normalization tool", "HYDRAcap MAX web simulator – UF design software", "Headquarter in USA", "Manufacturing sites: RO-Japan, USA, China; UF/MBR-USA"],
+            "quickGuide": {
+                "boronRejection": {
+                    "title": "Boron rejection - Seawater elements",
+                    "content": ["DOW FILMTEC™ SW30XLE-400 showed a clear advantage in terms of boron rejection in comparison to Hydranautics SWC5-LD element [Fig. 1 and 2]:", "4.6% higher boron rejection was achieved by DOW FILMTEC™ SW30XLE-400 at standard test conditions.", "DOW FILMTEC™ product matched the nominal PDS boron rejection, while SWC5-LD standard test boron rejection was 4.2% lower than stated in the PDS.", "13.5% higher boron rejection was offered by DOW FILMTEC™ SW30XLE-400 at real seawater"]},
+                "cleaningLimits": {
+                    "title": "Cleaning limits",
+                    "content": ["Hydranautics elements have been reported to have a chlorinated membrane chemistry, thus offering a shorter membrane life-time, reduced membrane resistance during cleanings and a deterioration on membrane salt rejection properties. It is found that in some warranties they offer, pH range is narrowed to 2 – 12, thus limiting the cleaning efficiency when biofouling is present."]},
+                "pressureDropAndFoul": {
+                    "title": "Pressure Drop and Fouling Resistance – BW and SW elements",
+                    "content": ["Hydranautics is not advertising any more the usage of biocide in their blue-colored feed spacers (LD feed spacers).", "The biocide used previously in the blue-colored feed spacer was Triclosan. This compound is already banned for use in in certain products since 2017 in some geographies. Additionally, our internal evaluation of the Hydranautics blue feed spacer  detected Triclosan leaching during operation and most importantly the presence of Triclosan biocide did not offer any additional biofouling prevention advantage.", "Hydranautics does not have biofouling resistant seawater membranes, in fact their membranes are just advertised for colloidal fouling mitigation.", "DOW FILMTEC™ elements offer the lowest pressure drop for brackish water membranes. This enables to save energy, due to up to 30% lower pressure drop (dP)."]},
+                "designSoftware": {
+                    "title": "Design Software - All elements",
+                    "content": ["Dow Water Solutions has an integrated WAVE plant design software that incorporates UF, RO & IER. Hydranautics software is not integrating UF and RO and there is a separate software for both technologies."]}
+            }
+        },
+        "warrantyTermsTab": {
+            "warranty": "Apparenty, only Workmanship and Materials warranty is offered. TBC.",
+            "filmTec": ["Salt passage rate of no more than 1.35 x maximum salt passage rate specified", "Permeate flow of at least 70% of average flow rate specified in PDS"]
+        },
+        "linksTab": {
+            "supportingMaterial": ["RO/NF Sales Kit: Technical Library/Competitive Information/Hydranautics", "inSIGHT: https://dowwater.cipher-sys.com/KWDowWater/", "Web: http://membranes.com/solutions/products/ro/"],
+            "externalTechFacts": ["[1] Understanding Biostatic Feed Spacer Effect 609-50214", "[2] Presentation Understanding Biostatic Feed Spacer Effect"]
+        }
+    }
+}
