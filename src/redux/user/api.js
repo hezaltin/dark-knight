@@ -45,6 +45,7 @@ export default {
         /* eslint-disable no-console */
         console.log('error:', error);
         /* eslint-enable no-console */
+        //return { username: 'hello' };
         throw error;
       }
     );

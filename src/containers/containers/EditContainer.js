@@ -1,17 +1,23 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import EditView from '../../components/EditView/EditView'
+import EditView from '../../components/EditView/EditView';
 
-import { bindSelectors } from '../utils/redux-utils'
-import { actions as entryActions, selectors as entrySelectors } from '../../redux/entry'
-import { actions as crudActions, selectors as crudSelectors } from '../../redux/crud'
-import { actions as modelActions, selectors as modelSelectors } from '../../redux/models'
+import { bindSelectors } from '../utils/redux-utils';
+import {
+  actions as entryActions,
+  selectors as entrySelectors
+} from '../../redux/entry';
+import {
+  actions as crudActions,
+  selectors as crudSelectors
+} from '../../redux/crud';
+import {
+  actions as modelActions} from '../../redux/models';
 // import {setSchemaName, setSchemaURI, isSelection, getSchemaList} from '../../redux/entry/actions'
 
-const boundEntrySelectors = bindSelectors(entrySelectors, 'entry')
-const boundCrudSelectors = bindSelectors(crudSelectors, 'documents')
-const boundModelSelectors = bindSelectors(crudSelectors, 'models')
+const boundEntrySelectors = bindSelectors(entrySelectors, 'entry');
+const boundCrudSelectors = bindSelectors(crudSelectors, 'documents');
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -29,10 +35,14 @@ const mapStateToProps = (state, ownProps) => {
     checkPending: boundEntrySelectors.checkPending(state),
     checkError: boundEntrySelectors.checkError(state),
     document: boundCrudSelectors.documentView(state, ownProps.uri, 'default'),
-    documentView: boundCrudSelectors.documentView(state, ownProps.uri, ownProps.view),
-    uri: ownProps.uri,
-  }
-}
+    documentView: boundCrudSelectors.documentView(
+      state,
+      ownProps.uri,
+      ownProps.view
+    ),
+    uri: ownProps.uri
+  };
+};
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
@@ -44,14 +54,14 @@ const mapDispatchToProps = dispatch =>
       createDataEntry: entryActions.createDataEntry,
       fetchDoc: crudActions.fetchDoc,
       loadModel: modelActions.loadModel,
-      loadSchema: modelActions.loadSchema,
+      loadSchema: modelActions.loadSchema
     },
     dispatch
-  )
+  );
 
 const EditContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(EditView)
+)(EditView);
 
-export default EditContainer
+export default EditContainer;

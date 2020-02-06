@@ -8,13 +8,16 @@ const modelReducer = (state = {}, action) => {
         content: null,
         pending: true
       };
-    case types.FETCH_MODEL_SUCCESS:
+    case types.FETCH_MODEL_SUCCESS:{
+      console.log(action.payload)
       return {
         ...state,
-        content: action.payload.response.content,
+        content: action.payload.fetchModel,
         pending: false,
         error: undefined
       };
+    }
+     
     case types.FETCH_MODEL_FAILURE:
       return {
         ...state,

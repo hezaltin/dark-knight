@@ -14,6 +14,7 @@ import {
   CHECK_FOR_DUPLICATE_SUCCESS,
   CHECK_FOR_DUPLICATE_FAILURE,
 } from "../actionTypes"
+import { fetchSchemaSuccess } from './fetchSchemaSuccess'
 
 const checkStatus = response => {
   if (response.status >= 200 && response.status < 300) {
@@ -57,6 +58,10 @@ export const selectSchema = (type, view) => {
     })
     dispatch({
       type: FETCH_SCHEMA
+    })
+    dispatch({
+      type: FETCH_SCHEMA_SUCCESS,
+      payload: fetchSchemaSuccess,
     })
     // TODO: Avoid to directly call MarkLogic APIs
     return fetch(new URL(`/api/crud/schema?uri=/models${type}/schema.json&view=${view}`, document.baseURI).toString(), {
