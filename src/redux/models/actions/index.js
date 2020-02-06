@@ -1,4 +1,5 @@
 /* global require */
+import { fetchModel } from './fetchModel'
 import * as types from '../actionTypes'
 
 require('isomorphic-fetch')
@@ -72,14 +73,28 @@ export const loadModel = (object) => {
   return (dispatch, getState) => {   
     const state = getState()
     if (!state.models[object]) {
+      // dispatch({
+      //   type: types.FETCH_MODEL_REQUESTED,
+      //   payload: { object }
+      // })
       dispatch({
-        type: types.FETCH_MODEL_REQUESTED,
-        payload: { object }
+        type: types.FETCH_MODEL_SUCCESS,
+        payload: {
+          object, 
+          fetchModel
+        }
       })
       
       const url = new URL(`/api/crud?uri=/models${object}/config.model.jsonld`, document.baseURI)
       return fetch(url.toString(), { credentials: 'same-origin' })
         .then(response => {
+          dispatch({
+            type: types.FETCH_MODEL_SUCCESS,
+            payload: {
+              object, 
+              fetchModel
+            }
+          })
           if (!response.ok) throw new Error(response.statusText);
           return response.json()
         })
@@ -99,13 +114,14 @@ export const loadModel = (object) => {
             })
           },
           error => {
-            dispatch({
-              type: types.FETCH_MODEL_FAILURE,
-              payload: {
-                object, 
-                error: 'Error fetching model: ' + error.message
-              }
-            })
+            // dispatch({
+            //   type: types.FETCH_MODEL_FAILURE,
+            //   payload: {
+            //     object, 
+            //     error: 'Error fetching model: ' + error.message
+            //   }
+            // })
+            
           }
         )
     }

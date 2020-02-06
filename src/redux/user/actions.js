@@ -22,7 +22,7 @@ export const submitLogin = (username, password, extraArgs = {}) => {
       if (response.ok) {
         dispatch(setCurrentUser(username));
         // dispatch(completeLogin({ username }));
-        dispatch(getAuthenticationStatus())
+        dispatch(getAuthenticationStatus());
       }
     });
   };
@@ -55,11 +55,37 @@ export const localLogout = () => ({
 
 export const getAuthenticationStatus = (extraArgs = {}) => {
   const API = extraArgs.api || defaultAPI;
+  const apiRsponse = {
+    authenticated: true,
+    username: 'bc4377',
+    profile: {
+      id: 'bc4377',
+      epass: 'bc4377',
+      email: 'divya.naredla@dupont.com',
+      name: {
+        firstName: 'Divya',
+        lastName: 'Naredla',
+        fullName: 'Naredla, Divya'
+      },
+      approver: { id: 'fan', fullName: 'Fan Li' },
+      previewCount: 0,
+      retrieved: '2019-12-19T09:17:10.941779-05:00',
+      roles: ['test-runner', 'user', 'admin', 'nobody']
+    },
+    disallowUpdates: false,
+    appUsersOnly: false,
+    appName: 'insight'
+  };
   return dispatch => {
     // TODO: pending state
     // dispatch({
     //   type:
     // })
+    dispatch({
+      type: types.FETCH_AUTHSTATUS_SUCCESS,
+      payload: { user: apiRsponse }
+    });
+    dispatch(completeLogin({ username: apiRsponse.username }));
     return API.status().then(response => {
       dispatch({
         type: types.FETCH_AUTHSTATUS_SUCCESS,

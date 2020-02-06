@@ -1,5 +1,6 @@
 /* global require */
 import * as types from '../actionTypes';
+import { fetchDocSuccess } from './fetchDocSuccess'
 
 require('isomorphic-fetch');
 
@@ -64,6 +65,16 @@ export const fetchDoc = (uri, type, view, extraArgs = {}) => {
       type: types.FETCH_DOC_REQUESTED,
       payload: { uri, type, view }
     })
+    dispatch({
+      type: types.FETCH_DOC_SUCCESS,
+      payload: {
+        view: view,
+        content: fetchDocSuccess,
+        contentType:  contentType,
+        uri
+      }
+    })
+    
     let contentType
     const url = new URL(`/api/crud/document-view?uri=${uri}&view=${view}`, document.baseURI)
     return fetch(url.toString(), { credentials: 'same-origin' })

@@ -16,7 +16,7 @@ export default (state = {}, action) => {
         ...state,
         [action.payload.username]: {
           ...state[action.payload.username],
-          isAuthenticated: false
+          isAuthenticated: true
         }
       };
     case types.SET_CURRENT_USER:

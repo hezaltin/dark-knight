@@ -46,10 +46,10 @@ class AppContainer extends React.Component {
     }
 
     // Once logged in, load app configuration model
-    if (!prevProps.isAuthenticated && this.props.isAuthenticated) {
+    //if (!prevProps.isAuthenticated && this.props.isAuthenticated) {
       const appId = `/applications/${process.env.REACT_APP_ID}`;
       this.props.loadModel(appId);
-    }
+    //}
   }
 
   render() {
