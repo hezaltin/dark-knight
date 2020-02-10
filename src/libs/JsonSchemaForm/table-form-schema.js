@@ -1,7 +1,7 @@
 const formData = {
   orders: [
     { name: 'Max', age: 20 },
-    {  name: 'Max', age: 25 },
+    { name: 'Max', age: 25 },
     { name: 'Max', age: 23 }
   ]
 };
@@ -24,10 +24,10 @@ const schema = {
               type: 'object',
               properties: {
                 unique: {
-                  type: 'string',
+                  type: 'array',
                   title: 'id'
                 }
-                            }
+              }
             }
           },
           name: {
@@ -59,14 +59,31 @@ const uiSchema = {
         {
           dataField: 'order',
           field: 'AsyncMultiObjectSelectorField',
+          dataFormat: (cell, row, enumObject, rowIndex, formData, onChange) => {
+            console.log('cell==>', cell);
+            console.log('formData==>', formData);
+            console.log('enumObject==>', enumObject);
+            console.log('row==>', row);
+            if(row && row.order){
+              if(typeof(row.order) ==='string') row.order = [{unique:row.order}]
+            }
+            if (typeof cell === 'undefined') {
+              return;
+            }
+            const dataFormat =
+              typeof cell === 'string' ? [cell] : cell.map(i => i.unique);
+            const cellValue = { unique: dataFormat.join(',') };
+
+            return cellValue.unique;
+          },
           uiSchema: {
             asyncMultiObjectSelector: {
               url: '/api/value/typeahead-taxonomy-concepts/technology?',
               method: 'GET',
-              mapping:{
-                unique:'name'
+              mapping: {
+                unique: 'name'
               },
-              labelKey: 'name',
+              labelKey: 'unique',
               minLength: 0,
               allowNew: true,
               newSelectionPrefix: 'Add a new item: '
