@@ -1,9 +1,39 @@
+import slugify from 'slugify';
 const formData = {
   orders: [
-    { name: 'Max', age: 20 },
-    { name: 'Max', age: 25 },
-    { name: 'Max', age: 23 }
-  ]
+    { name: 'Max', age: 20,files: [
+      {
+        name: '123.pdf',
+        uri: '/test/file/abc/123.pdf',
+        type: 'application/pdf',
+        lastModifiedDate: new Date('2018-01-01').toISOString(),
+        size: 123456,
+        fileType: 'existing'
+      },
+      {
+        name: '20190826-sc-digital-day-compas-poster-final.ppt',
+        uri: '/test/file/abc/20190826-sc-digital-day-compas-poster-final.ppt',
+        type: 'application/vnd.ms-powerpoint',
+        lastModifiedDate: new Date('2010-11-11').toISOString(),
+        size: 6543210,
+        fileType: 'existing'
+      },
+      {
+        name:
+          '609-50337 Toray element construction issues (vs. SW30XHR-440i).pdf',
+        uri: `/test/file/abc/${slugify(
+          '609-50337 Toray element construction issues (vs. SW30XHR-440i).pdf'
+        )}`,
+        type: 'application/pdf',
+        lastModifiedDate: new Date().toISOString(),
+        size: 9999,
+        fileType: 'existing'
+      }
+    ] },
+    { name: 'Max', age: 25,files:[] },
+    { name: 'Max', age: 23,files:[] }
+  ],
+  
 };
 
 const schema = {
@@ -34,6 +64,27 @@ const schema = {
             type: 'string',
             title: 'Name'
           },
+          files: {
+            type: 'array',
+            title: 'Attachment',
+            items: {
+              type: 'object',
+              properties: {
+                name: {
+                  type: 'string'
+                },
+                uri: {
+                  type: 'string'
+                },
+                type: {
+                  type: 'string'
+                },
+                modified: {
+                  type: 'string'
+                }
+              }
+            }
+          },
           age: {
             type: 'number',
             title: 'Age'
@@ -60,13 +111,22 @@ const uiSchema = {
           dataField: 'order',
           field: 'AsyncMultiObjectSelectorField',
           dataFormat: (cell, row, enumObject, rowIndex, formData, onChange) => {
-            console.log('cell==>', cell);
-            console.log('formData==>', formData);
-            console.log('enumObject==>', enumObject);
-            console.log('row==>', row);
-            if(row && row.order){
-              if(typeof(row.order) ==='string') row.order = [{unique:row.order}]
+            console.log(`The cell is ${cell}`);
+            console.log(formData);
+            if (!formData) {
+              console.log('Hello World');
             }
+            console.log(
+              `The row is is ${JSON.stringify(row)} and the position is ${
+                row._position
+              }`
+            );
+            console.log(formData)
+            if (row && row.order) {
+              if (typeof row.order === 'string')
+                row.order = [{ unique: row.order }];
+            }
+
             if (typeof cell === 'undefined') {
               return;
             }
@@ -80,15 +140,14 @@ const uiSchema = {
             asyncMultiObjectSelector: {
               url: '/api/value/typeahead-taxonomy-concepts/technology?',
               method: 'GET',
-              mapping: {
-                unique: 'name'
-              },
+
               labelKey: 'unique',
               minLength: 0,
               allowNew: true,
               newSelectionPrefix: 'Add a new item: '
             }
-          }
+          },
+          addTo: 'order'
         },
         {
           dataField: 'name',
@@ -101,16 +160,40 @@ const uiSchema = {
           className: 'col-md-1',
           columnClassName: 'col-md-1',
           editColumnClassName: 'col-md-1'
+        },
+        {
+          dataField: 'files',
+          field: 'FileUploaderField',
+          dataFormat:(cell, row, enumObject, rowIndex, formData, onChange)=>{
+            if(row && row.files && row.files){
+             
+              if( !row.files.length){
+                return 'No Data'
+              }
+              console.log(`row is ${row.files.map(name=>name.name)}`)
+              return  row.files.map(name=>name.name).join(',')
+            }
+
+          },
+          uiSchema: {
+            FileUploaderField:{
+              files: {
+                fileUploader: {},
+                uriPrefix: '/test/file/abc/'
+              }
+            }
+            
+          }
         }
       ],
 
       tableConfig: {
-        mandatoryField: ['description'],
+        mandatoryField: [],
         action: {
           updateClassNames: {
             // Upadating Class Names for the custom rows
             classToAdd: {
-              classNameToAdd: 'disableEdit',
+              //  classNameToAdd: 'disableEdit',
               columnsToAdd: ['order']
             },
             classToDelete: {
@@ -123,7 +206,14 @@ const uiSchema = {
           }
         }
       },
-      leftActions: [],
+      leftActions: [
+        // {
+        //   action: 'insert',
+        //   icon: 'glyphicon glyphicon-minus',
+        //   text: 'Delete',
+        //   displayName: 'Right Panel'
+        // }
+      ],
       rightActions: [
         {
           action: 'delete',
