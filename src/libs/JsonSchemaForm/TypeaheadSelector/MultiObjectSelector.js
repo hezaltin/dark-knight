@@ -92,13 +92,19 @@ class BaseMultiObjectSelectorField extends Component {
 
   handleBlurAsync = event => {
     let { schema, uiSchema: { asyncMultiObjectSelector: { labelKey } }, onChange, formData, errorSchema } = this.props
+    console.log(`The label is ${labelKey}`)
     labelKey = mapLabelKey(labelKey)
-
+    
     const label = formData && applyLabelKey(formData, labelKey)
     let selectedText = event.target.value && event.target.value.trim()
     
     if (selectedText !== label) {
-      onChange()
+      console.log(`The Selected Text is ${selectedText}`)
+      
+      if(label){
+        onChange()
+      }
+     
       // this.selector.getInstance().clear()
     }
   }

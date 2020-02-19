@@ -108,8 +108,10 @@ export class FileUploaderField extends Component {
   }
 
   render() {
+    console.log(this.props)
+   // const uriPrefixData = uriPrefix ? {uriPrefix} : this.props.uiSchema.uriPrefix
     let {
-      formContext: { uriPrefix },
+     // formContext:{uriPrefixData},
       schema,
       uiSchema: { asyncConstraintSelector },
       formData,
@@ -131,7 +133,7 @@ export class FileUploaderField extends Component {
               LayoutComponent={(props) => 
                 <Layout {...props} existingFiles={existingFiles} unlink={this.handleUnlink}></Layout>}
               SubmitButtonComponent={null}
-              getUploadParams={({file, meta}) => this.getUploadParams({file, meta}, uriPrefix)}
+              getUploadParams={({file, meta}) => this.getUploadParams({file, meta})}
               onChangeStatus={this.handleChangeStatus}
               onSubmit={this.handleSubmit}
               // accept="image/*,audio/*,video/*,application/pdf"

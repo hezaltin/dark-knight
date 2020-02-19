@@ -74,7 +74,7 @@ const CustomSchemaField = function(props) {
             formContext.onEditorDataChange(
               name,
               formData,
-              schema['brain:xpath']
+              schema['brain:xpath'],
             );
             return;
           }
@@ -499,7 +499,8 @@ export default class EditEntry extends Component {
       onDataChange: debounce(this.onDataChange, 500), //debounce(this.onFieldChange, 250)
       onHtmlDataChange: debounce(this.onHtmlDataChange, 500),
       onEditorDataChange: debounce(this.onEditorDataChange, 500),
-      onFormSubmit: this.handleFormSubmit
+      onFormSubmit: this.handleFormSubmit,
+      uriPrefix: '/test/file/abc/'
     };
 
     // console.log({dataSchema, uiSchema, doc})
@@ -547,7 +548,8 @@ export default class EditEntry extends Component {
           <Form
             fields={fields}
             schema={this.state.dataSchemaForm}
-            formContext={formContext}
+          //  formContext={formContext}
+           formContext={{uriPrefix: '/test/file/abc/'}}
             formData={this.state.doc}
             uiSchema={this.state.uiSchemaForm}
             onChange={this.handleFormUpdate}
