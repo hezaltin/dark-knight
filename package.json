@@ -33,7 +33,7 @@
     "grove-core-react-components": "git+https://project.marklogic.com/repo/scm/nacw/grove-core-react-components.git#1.0.0-rc.1",
     "grove-core-react-redux-containers": "git+https://project.marklogic.com/repo/scm/~pmcelwee/grove-core-react-redux-containers.git#1.0.0-rc.1",
     "http-proxy-middleware": "^0.20.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash.throttle": "^4.1.1",
     "moment": "^2.24.0",
     "office-ui-fabric-react": "^7.67.0",
